@@ -1,3 +1,7 @@
+# implemented based on examples from Guido van Rossum
+# from https://mail.python.org/pipermail/python-dev/2008-January/076194.html
+
+
 def patch_method_in(cls):
     """
     To use:

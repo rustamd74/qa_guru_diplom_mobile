@@ -11,7 +11,7 @@ import config
 from mobile_tests import utils
 
 
-@pytest.fixture(scope="function", autouse=True)
+@pytest.fixture(scope='function', autouse=True)
 def driver_management(request):
     browser.config.timeout = config.settings.timeout
     browser.config._wait_decorator = support._logging.wait_with(

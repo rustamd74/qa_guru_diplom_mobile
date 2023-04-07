@@ -1,10 +1,17 @@
 from selene import have, be
 from selene.support.shared import browser
 from allure import step as title
-
+from allure_commons.types import Severity
 from mobile_tests.model import app
+import allure
 
 
+@allure.title('Search BrowserStack')
+@allure.tag('mobile')
+@allure.label('owner', 'dzhafarov_ro')
+@allure.severity(Severity.NORMAL)
+@allure.feature('search')
+@allure.suite('wikipedia')
 def test_search_browser_stack():
     app.given_opened()
 
@@ -17,6 +24,12 @@ def test_search_browser_stack():
         browser.element('«Software company based in India»').should(be.visible)
 
 
+@allure.title('Search JavaScript')
+@allure.tag('mobile')
+@allure.label('owner', 'dzhafarov_ro')
+@allure.severity(Severity.NORMAL)
+@allure.feature('search')
+@allure.suite('wikipedia')
 def test_search_js():
     app.given_opened()
 
@@ -29,6 +42,12 @@ def test_search_js():
         browser.element('«High-level programming language»').should(be.visible)
 
 
+@allure.title('Search Baku')
+@allure.tag('mobile')
+@allure.label('owner', 'dzhafarov_ro')
+@allure.severity(Severity.NORMAL)
+@allure.feature('search')
+@allure.suite('wikipedia')
 def test_search_baku():
     app.given_opened()
 
@@ -41,6 +60,12 @@ def test_search_baku():
         browser.element('«Capital of Azerbaijan»').should(be.visible)
 
 
+@allure.title('Language changes')
+@allure.tag('mobile')
+@allure.label('owner', 'dzhafarov_ro')
+@allure.severity(Severity.NORMAL)
+@allure.feature('localisation')
+@allure.suite('wikipedia')
 def test_language_selection():
     app.given_opened()
 
