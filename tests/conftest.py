@@ -8,10 +8,10 @@ from selene import support
 from appium import webdriver
 
 import config
-from mobile_tests import utils
+from mobile_tests_lesson_13 import utils
 
 
-@pytest.fixture(scope="function", autouse=True)
+@pytest.fixture(scope='function', autouse=True)
 def driver_management(request):
     browser.config.timeout = config.settings.timeout
     browser.config._wait_decorator = support._logging.wait_with(

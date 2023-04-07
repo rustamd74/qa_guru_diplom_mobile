@@ -5,6 +5,7 @@ from allure_commons.types import Severity
 from mobile_tests.model import app
 import allure
 
+
 @allure.title('Search BrowserStack')
 @allure.tag('mobile')
 @allure.label('owner', 'dzhafarov_ro')

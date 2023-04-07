@@ -1,6 +1,7 @@
 import allure
 from selene.support.shared import browser
 
+import config
 from mobile_tests import utils
 
 
