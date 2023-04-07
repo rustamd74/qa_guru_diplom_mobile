@@ -1,54 +1,35 @@
+import os
 import pydantic
 from appium.options.android import UiAutomator2Options
 from typing import Literal, Optional
-
+from dotenv import load_dotenv
 from mobile_tests import utils
 
+load_dotenv()
 EnvContext = Literal['local', 'emulator', 'test', 'prod']
+
+user = os.getenv('LOGIN')
+key = os.getenv('KEY')
+url = os.getenv('APPIUM_BROWSERSTACK')
 
 
 class Settings(pydantic.BaseSettings):
     context: EnvContext = 'test'
 
-    # --- Appium Capabilities ---
-    platformName: str = None
-    platformVersion: str = None
-    deviceName: str = None
+    platformName: Optional[str] = None
+    os_version: Optional[str] = None
+    deviceName: Optional[str] = None
     app: Optional[str] = None
     appName: Optional[str] = None
     appWaitActivity: Optional[str] = None
-    newCommandTimeout: Optional[int] = 360
-    udid: Optional[str] = None
-
-    # --- > BrowserStack Capabilities ---
+    newCommandTimeout: Optional[int] = 6
     projectName: Optional[str] = None
     buildName: Optional[str] = None
     sessionName: Optional[str] = None
-    # --- > > BrowserStack credentials---
-    userName: Optional[str] = pydantic.Field(None, env='browserstack.userName')
-    accessKey: Optional[str] = pydantic.Field(None, env='browserstack.accessKey')
-    '''
-    # will work only on mac os or linux:
-    userName: Optional[str] = None
-    accessKey: Optional[str] = None
-
-    # will work both on mac os with userName as env var name, 
-    # and on windows with 'browserstack.userName' var name
-    userName: Optional[str] = pydantic.Field(None, env=['browserstack.userName', 'userName'])
-    accessKey: Optional[str] = pydantic.Field(None, env=['browserstack.accessKey', 'accessKey'])
-
-    # see more in docs: https://docs.pydantic.dev/usage/settings/#environment-variable-names
-    '''
-
-    # --- Remote Driver ---
-    remote_url: str = 'http://127.0.0.1:4723/wd/hub'  # it's a default appium server url
-
-    # --- Selene ---
+    udid: Optional[str] = None
+    remote_url = f"http://{user}:{key}@{url}/wd/hub"
     timeout: float = 6.0
 
-    @property
-    def run_on_browserstack(self):
-        return 'hub.browserstack.com' in self.remote_url
 
     @property
     def driver_options(self):
@@ -67,19 +48,6 @@ class Settings(pydantic.BaseSettings):
             options.udid = self.udid
         if self.appWaitActivity:
             options.app_wait_activity = self.appWaitActivity
-        if self.run_on_browserstack:
-            options.load_capabilities(
-                {
-                    'platformVersion': self.platformVersion,
-                    'bstack:options': {
-                        'projectName': self.projectName,
-                        'buildName': self.buildName,
-                        'sessionName': self.sessionName,
-                        'userName': self.userName,
-                        'accessKey': self.accessKey,
-                    },
-                }
-            )
 
         return options
 
