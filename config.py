@@ -8,7 +8,7 @@ EnvContext = Literal['personal', 'local', 'test', 'stage', 'prod']
 
 
 class Settings(pydantic.BaseSettings):
-    context: EnvContext = 'local'
+    context: EnvContext = 'test'
 
     # --- Appium Capabilities ---
     platformName: str = None
