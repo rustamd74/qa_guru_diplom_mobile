@@ -4,7 +4,7 @@ from typing import Literal, Optional
 
 from mobile_tests import utils
 
-EnvContext = Literal['local', 'emulator', 'test', 'stage', 'prod']
+EnvContext = Literal['local', 'emulator', 'test', 'prod']
 
 
 class Settings(pydantic.BaseSettings):
