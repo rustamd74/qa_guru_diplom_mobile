@@ -25,8 +25,8 @@ class Settings(pydantic.BaseSettings):
     buildName: Optional[str] = None
     sessionName: Optional[str] = None
     # --- > > BrowserStack credentials---
-    userName: Optional[str] = pydantic.Field(None, env='browserstack.userName')
-    accessKey: Optional[str] = pydantic.Field(None, env='browserstack.accessKey')
+    userName: Optional[str] = None
+    accessKey: Optional[str] = None
     '''
     # will work only on mac os or linux:
     userName: Optional[str] = None
