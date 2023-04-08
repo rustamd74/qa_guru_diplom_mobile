@@ -28,12 +28,16 @@
 
 ### <img width="3%" title="Jenkins" src="https://avatars.githubusercontent.com/u/2520748?v=4"> [Starting a project in Jenkins](https://jenkins.autotests.cloud/user/oksana/builds)
 ##### Clicking on "Build Now" will start building tests and running them on the server Jenkins.
-![Jenkins_run](/images/screenshots/jenkins.jpg)
+![Jenkins_run](/images/screenshots/jenkins.png)
 
 ### <img width="3%" title="Browserstack" src="https://brandeps.com/logo-download/B/BrowserStack-logo-vector-01.svg"> Starting a project in Browserstack
 ##### After starting the build in Jenkins, the tests begin to pass remotely through the Browserstack. Where in real time you can monitor the passage of the test throughз логи.
 
-![Browserstack](images/screenshots/browserstack.jpg)
+![Browserstack](images/screenshots/browserstack.png)
+
+#### Video of passing tests on
+
+![Browserstack](images/screenshots/bstack_test_video.gif)
 
 ### <img width="3%" title="Allure Report" src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4"> Allure report
 ##### Based on the results of passing the tests, an Allure report is generated.
@@ -41,13 +45,13 @@
 
 ##### The Behaviors tab contains collected test cases, which describe the steps. Attachments are implemented for api methods. For combined tests, at the end of the test, a screenshot is taken and a video recording of the test is saved.
 ![Behaviors](/images/screenshots/behaviors.png)
-![Behaviors1](/images/screenshots/behaviors1.png)
+![Suites](/images/screenshots/suites.png)
 
 ##### Video passing the test.
 ![This is an image](/images/screenshots/video.gif)
 
-Logging implemented in the project:
-![This is an image](/images/screenshots/logger.png)
+#### You can view the test logs on browserstack.:
+![This is an image](/images/screenshots/bs_logs.png)
 ##### Implemented integration with Allure TestOps and Jira.
 ![Jira](/images/screenshots/jira.png)
 
@@ -55,4 +59,4 @@ Logging implemented in the project:
 ### <img width="3%" title="Telegram" src="https://cdn.icon-icons.com/icons2/923/PNG/256/telegram_icon-icons.com_72055.png"> Integration with Telegram
 ##### At the end of the tests, send a mini report to telegram
 
-![Telegram](/images/screenshots/notifications.png)
+![Telegram](/images/screenshots/telegram.png)
