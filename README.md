@@ -16,7 +16,7 @@
 </p>
 <br> 
 
-### Что проверяют тесты
+### What tests check
 * Search
 * Language changes
 <br>
@@ -31,11 +31,11 @@
 ![Jenkins_run](/images/screenshots/jenkins.png)
 
 ### <img width="3%" title="Browserstack" src="https://brandeps.com/logo-download/B/BrowserStack-logo-vector-01.svg"> Starting a project in Browserstack
-##### After starting the build in Jenkins, the tests begin to pass remotely through the Browserstack. Where in real time you can monitor the passage of the test throughз логи.
+##### After starting the build in Jenkins, the tests begin to pass remotely through the Browserstack. Where in real time you can monitor the passage of the test through.
 
 ![Browserstack](images/screenshots/browserstack.png)
 
-#### Video of passing tests on
+#### Video of passing tests on Browserstack:
 
 ![Browserstack](images/screenshots/bstack_test_video.gif)
 
