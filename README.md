@@ -26,7 +26,7 @@
 * real devices
 * emulators 
 
-### <img width="3%" title="Jenkins" src="https://avatars.githubusercontent.com/u/2520748?v=4"> [Starting a project in Jenkins](https://jenkins.autotests.cloud/user/oksana/builds)
+### <img width="3%" title="Jenkins" src="https://avatars.githubusercontent.com/u/2520748?v=4"> [Starting a project in Jenkins](https://jenkins.autotests.cloud/job/003_rustamd74_python_diplom_mobile/)
 ##### Clicking on "Build Now" will start building tests and running them on the server Jenkins.
 ![Jenkins_run](/images/screenshots/jenkins.png)
 
