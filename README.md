@@ -30,7 +30,7 @@
 ##### Clicking on "Build Now" will start building tests and running them on the server Jenkins.
 ![Jenkins_run](/images/screenshots/jenkins.png)
 
-### <img width="3%" title="Browserstack" src="https://brandeps.com/logo-download/B/BrowserStack-logo-vector-01.svg"> Starting a project in Browserstack
+### <img width="3%" title="Browserstack" src="https://brandeps.com/logo-download/B/BrowserStack-logo-vector-01.svg"> [Starting a project in Browserstack](https://app-automate.browserstack.com/builds/5cd57eedd40b32dd448f1a3a3f7681c9d6e7b999/sessions/82d1c40111d50647cfaa8d2053d12ad2702f5343?auth_token=39e539ca4733d456702e035fe3ee8d8a0aabb20c3385cf8427702320a97c9d98)
 ##### After starting the build in Jenkins, the tests begin to pass remotely through the Browserstack. Where in real time you can monitor the passage of the test throughз логи.
 
 ![Browserstack](images/screenshots/browserstack.png)
