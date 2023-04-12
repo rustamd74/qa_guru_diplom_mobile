@@ -39,7 +39,7 @@
 
 ![Browserstack](images/screenshots/bstack_test_video.gif)
 
-### <img width="3%" title="Allure Report" src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4"> Allure report
+### <img width="3%" title="Allure Report" src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4"> [Allure report](https://jenkins.autotests.cloud/job/003_rustamd74_python_diplom_mobile/allure/)
 ##### Based on the results of passing the tests, an Allure report is generated.
 ![Overview](/images/screenshots/report.png)
 
